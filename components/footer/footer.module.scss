@@ -1,0 +1,19 @@
+.footer {
+  height: 100px;
+  border-top: 1px solid var(--white-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-light);
+  color: var(--white);
+
+  & a {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  & b {
+    margin: 0 5px;
+  }
+}

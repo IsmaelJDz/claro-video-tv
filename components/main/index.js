@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 
-//import styles from "./main.module.scss";
+import styles from "./main.module.scss";
 
-import Layout from "../../Layout/";
+import Layout from "../layout";
 import Card from "../card";
 
 /**
@@ -11,15 +11,13 @@ import Card from "../card";
  */
 
 const Main = () => {
-  const products = useSelector(state => state.products);
-
-  const totalProducts = products.products;
+  const movies = useSelector(state => state.movies.currentMovies);
 
   return (
     <Layout>
-      <div>
-        {totalProducts.map(product => (
-          <Card {...product} key={product.id} />
+      <div className={styles.main}>
+        {movies.map(movie => (
+          <Card {...movie} key={movie.id} />
         ))}
       </div>
     </Layout>

@@ -1,29 +1,86 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useState, useRef } from "react";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import Image from "next/image";
 
-import CartIcon from '../cart-icon/';
-import CartDropdown from '../cart-dropdown';
+import Navigation from "../navigation/";
+import Button from "../UI/button";
+import InputSearch from "../UI/inputSearch";
 
+import { setFilterMovie } from "../../redux/movies/movie.action";
 
-const Header = ({ currentUser, hidden }) => {
+import styles from "./header.module.scss";
+
+const Header = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [show, setShow] = useState(false);
+  const elementMenu = useRef(null);
+
+  /**
+   * handleChange
+   * @param {*} evt : value -> data input
+   * Desc: filter data by value
+   */
+
+  const handleChange = evt => {
+    const filterSearch = evt.target.value;
+
+    if (filterSearch.length > 2) {
+      dispatch(setFilterMovie(filterSearch));
+    } else {
+      dispatch(setFilterMovie(""));
+    }
+  };
+
+  /**
+   * handleClick
+   * @param {*} none
+   * Desc: open or close the hamburger menu
+   */
+
+  const handleClick = () => {
+    if (!show) {
+      elementMenu.current.setAttribute("style", "display:block;");
+      setShow(true);
+    } else {
+      elementMenu.current.setAttribute("style", "display:none;");
+      setShow(false);
+    }
+  };
+
+  /**
+   * Back to main landing
+   */
+
+  const backMain = () => {
+    router.push("/");
+  };
+
   return (
-    <header className="flex justify-between">
-      <div>
-        <Link href="/">
-          <Image src="/img/logo.svg" height={60} width={150} />
-        </Link>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Image
+          onClick={backMain}
+          src="/img/clarovideo-logo-sitio.svg"
+          alt="Logo clarovideo"
+          width={150}
+          height={40}
+        />
+        <div className={styles.movileMenu} onClick={handleClick}>
+          <span className={styles.iconMenu}>
+            <i className="fas fa-bars"></i>
+          </span>
+        </div>
       </div>
-      <div>
-        <Link href="/">
-          CONTACT
-        </Link>
-        <Link href="/">
-          SIGN IN
-        </Link>
-        <CartIcon />
+
+      <Navigation elementMenu={elementMenu} />
+
+      <div className={styles.rightMenu}>
+        <InputSearch handleChange={evt => handleChange(evt)} />
+        <Button title="Ingresar" />
+        <Button title="Regístrate" />
       </div>
-      {hidden ? null : <CartDropdown />}
     </header>
   );
 };

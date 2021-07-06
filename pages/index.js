@@ -1,7 +1,7 @@
-import Principal from "../components/main"
+import MainContainer from "../components/main";
 import { useDispatch } from "react-redux";
 
-import { setProducts } from "../redux/products/products.action";
+import { setCurrentMovies } from "../redux/movies/movie.action";
 
 /**
  *
@@ -9,18 +9,23 @@ import { setProducts } from "../redux/products/products.action";
  * @returns Main movies container
  */
 
-export default function Home({products}) {
+export default function Home(props) {
   const dispatch = useDispatch();
 
-  dispatch(setProducts(products));
+  const {
+    movies: {
+      response: { groups }
+    }
+  } = props;
 
-  return <Principal />;
+  dispatch(setCurrentMovies(groups));
 
+  return <MainContainer />;
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   const res = await fetch(
-    "https://products-api-meru.vercel.app/api/products"
+    "https://mfwkweb-api.clarovideo.net/services/content/list?quantity=50&from=0&level_id=GPS&order_way=ASC&order_id=50&filter_id=34289&region=mexico?device_id=web&device_category=web&device_model=web&device_type=web&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.86&region=mexico&HKS=9s5hqq76r3g6sg4jb90l38us52&user_id=22822863&group_id=591825"
   );
   const data = await res.json();
 
@@ -38,7 +43,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      products: data
+      movies: data
     },
     revalidate: 60
   };

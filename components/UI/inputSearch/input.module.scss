@@ -1,0 +1,24 @@
+.mainInput {
+  position: relative;
+}
+
+.search {
+  inline-size: 95%;
+  border: 1px solid var(--gray);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 8px;
+  color: var(--gray);
+  font-size: 1rem;
+  display: block;
+  background-color: var(--gray-dark);
+  border: 1px solid var(--gray-light);
+}
+
+.iconSearch {
+  position: absolute;
+  top: 10px;
+  right: 7%;
+  color: var(--gray-clear);
+}

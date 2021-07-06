@@ -1,0 +1,11 @@
+.container {
+  .button {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--white);
+    margin: 0 4px;
+    cursor: pointer;
+  }
+}
