@@ -12,13 +12,25 @@ import Card from "../card";
 
 const Main = () => {
   const movies = useSelector(state => state.movies.currentMovies);
+  const filterMovie = useSelector(state => state.movies.filterMovie);
 
   return (
     <Layout>
       <div className={styles.main}>
-        {movies.map(movie => (
-          <Card {...movie} key={movie.id} />
-        ))}
+        {
+          filterMovie.length === 1 ?
+            (
+              filterMovie.map(movie => (
+                <Card {...movie} key={movie.id} />
+              ))
+            )
+          :
+            (
+              movies.map(movie => (
+                <Card {...movie} key={movie.id} />
+              ))
+            )
+        }
       </div>
     </Layout>
   );

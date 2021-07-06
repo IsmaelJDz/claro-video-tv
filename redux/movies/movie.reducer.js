@@ -1,9 +1,8 @@
 import { MoviesActionTypes } from "./movie.types";
 
 const INITIAL_STATE = {
-  currentMovies: null,
-  copyCurrentMovies: null,
-  selectedMovie: null
+  currentMovies: [],
+  filterMovie: []
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -12,28 +11,22 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentMovies: action.payload,
-        copyCurrentMovies: action.payload
       };
 
     case MoviesActionTypes.SET_FILTER_MOVIE:
+
       return {
         ...state,
-        currentMovies:
-          action.payload.length > 3
-            ? state.currentMovies.filter(movieName => {
+        filterMovie:
+          action.payload.length > 2
+            ? [...state.currentMovies].filter(movieName => {
                 return (
                   movieName.title
                     .toLowerCase()
                     .indexOf(action.payload.toLowerCase()) !== -1
                 );
               })
-            : state.copyCurrentMovies
-      };
-
-    case MoviesActionTypes.SET_SPECIFIC_MOVIE:
-      return {
-        ...state,
-        selectedMovie: action.payload
+            : state.currentMovies
       };
 
     default:

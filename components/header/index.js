@@ -7,7 +7,7 @@ import Navigation from "../navigation/";
 import Button from "../UI/button";
 import InputSearch from "../UI/inputSearch";
 
-import { setFilterMovie } from "../../redux/movies/movie.action";
+import { setFilterMovie, setSpecificMovie } from "../../redux/movies/movie.action";
 
 import styles from "./header.module.scss";
 
@@ -67,7 +67,7 @@ const Header = () => {
           width={150}
           height={40}
         />
-        <div className={styles.movileMenu} onClick={handleClick}>
+        <div className={styles.mobileMenu} onClick={handleClick}>
           <span className={styles.iconMenu}>
             <i className="fas fa-bars"></i>
           </span>

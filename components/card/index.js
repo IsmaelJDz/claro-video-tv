@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useRouter } from "next/router";
-import ReactContentLoader from "../loaderCard";
+import ReactContentLoader from "../skeleton";
 import { useObserver } from "../../hooks/useObserver";
 
 import styles from "./card.module.scss";
