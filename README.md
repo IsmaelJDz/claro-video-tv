@@ -2,7 +2,7 @@
 
 ![screenshot](/public/img/clarovideo.png)
 
-[See app](https://claro-app-tv.vercel.app/) 👀
+[See app](https://claro-video-tv.vercel.app/) 👀
 
 ## Welcome! 👋
 
