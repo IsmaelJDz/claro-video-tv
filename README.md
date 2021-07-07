@@ -1,6 +1,6 @@
 # Frontend Claro video 📺
 
-![screenshot](public/img/Home.png)
+![screenshot](/public/img/clarovideo.png)
 
 [See app](https://claro-app-tv.vercel.app/) 👀
 
@@ -21,19 +21,25 @@
 - Node
 - Npm
 
-## Run app " Development " ⚙️
+## Run app "Development" ⚙️
 
 ```
 1.- npm install or yarn install
-2.- npm run dev or yarn dev  --Mode development
+2.- npm run dev or yarn dev
 ```
 
-## Run app " Production " 🚀
+## Run test 🧪
+
+```
+1.- npm run test
+```
+
+## Run app "Production" 🚀
 
 ```
 1.- npm install or yarn install
 2.- npm run build or yarn build
-3.- npm run start or yarn start  --Mode production
+3.- npm run start or yarn start
 ```
 
 ## Deployment 📦
