@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 
 import styles from "./main.module.scss";
 
-import Layout from "../layout";
-import Card from "../card";
+import Layout from "@/components/layout";
+import Card from "@/components/card";
 
 /**
  *
@@ -21,7 +21,7 @@ const Main = () => {
           filterMovie.length === 1 ?
             (
               filterMovie.map(movie => (
-                <Card {...movie} key={movie.id} />
+                <Card {...movie} key={movie.id} unique />
               ))
             )
           :

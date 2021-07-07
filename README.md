@@ -1,56 +1,59 @@
-# Frontend ecommerce online
+# Frontend Claro video 📺
 
-![Captura de la app](../landing.png)
+![Captura de la app](public/img/Home.png)
 
-[See the aplication](https://ismaeljdz.github.io/LightDarkMode/) 👀
+[See the aplication](https://meru-ecommerce.vercel.app/) 👀
 
 ## Welcome! 👋
 
-## light and dark mode 🚀
-
-\*\* Technologies Frontend 🛠
+\*\* Frontend Technologies 🛠
 
 - HTML5
 - CSS3
 - JavaScript,
 - React,
-- Apollo client,
 - Next,
-- Typescript,
 - Redux
-- React testing library
-- Husky
+- Tailwind
 
-\*\* Technologies Backend 🛠
+## Pre-requirements 📋
 
-- Apollo Server,
-- GraphQl,
-- MongoDB
+- Node
+- Npm
 
-### Pre-requirements 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
+## Run app " Development " ⚙️
 
 ```
-NodeJs, NPM
+1.- npm install or yarn install
+2.- npm run dev or yarn dev  --Mode development
 ```
 
-## Autores ✒️
+## Run app " Production " 🚀
+
+```
+1.- npm install or yarn install
+2.- npm run build or yarn build
+3.- npm run start or yarn start  --Mode production
+```
+
+## Deployment 📦
+
+- [Vercel](https://vercel.com/) - Vercel
+
+_Tools I've used in this project_
+
+- [Npm](https://www.npmjs.com/) - Npm
+- [React](https://es.reactjs.org/) - React
+- [Redux](https://es.redux.js.org/) - Redux
+- [NextJs](https://nextjs.org/) - NextJs
+- [Sass](https://sass-lang.com/) - Sass
+
+## Author ✒️
 
 _Developed by_
 
 - **Ismael JDz7** - _Frontend-Developer_ - [IsmaelJdz7](https://github.com/IsmaelJDz)
-- **Ismael JDz7** - _Backend-Developer_ - [IsmaelJdz7](https://github.com/IsmaelJDz)
-
-## Deployment 📦
-
-_add additional notes about how to do deploy_
-
-_Tools I've used in this project_
-
-- [Apollo-Server](https://www.apollographql.com/docs/apollo-server/) - Apollo Server
-- [Npm](https://www.npmjs.com/) - Manejador de dependencias
 
 ---
 
-⌨️ con ❤️ por el ☕️ por [IsmaelJDz7](https://github.com/IsmaelJDz) 😊
+⌨️ with ❤️ by [IsmaelJDz7](https://github.com/IsmaelJDz) 😊

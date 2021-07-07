@@ -1,10 +1,13 @@
 :root {
-  --black-classic: #000000;
-  --black-light: #0f0f0f;
+  --black: #000000;
   --white: #ffffff;
-  --classic-green: #006341;
-  --light-green: #2a8a15;
-  --gray: #666666;
+  --white-light: #eaeaea;
+  --gray-dark: #333333;
+  --gray-light: #555555;
+  --gray-clear: #979797;
+  --gray: #808080;
+  --light-yellow: #ecaf2a;
+  --blue-light: rgba(29, 161, 242, 1);
 }
 
 html,

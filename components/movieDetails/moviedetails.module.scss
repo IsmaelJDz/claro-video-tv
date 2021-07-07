@@ -8,6 +8,7 @@
     width: 75%;
     margin: 0 auto;
     max-width: 1250px;
+    gap: 30px;
   }
 
   .containerActors {
@@ -77,8 +78,9 @@
     .description,
     .genres {
       display: flex;
+      gap: 15px;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       color: var(--white);
 
       .genresTitle {
@@ -102,12 +104,12 @@
     .share {
       display: flex;
       align-items: center;
-      float: 1;
+      padding: 10px 0;
 
       & i {
         color: var(--blue-light);
         font-size: 1.5rem;
-        margin: 0 10px;
+        margin-right: 1rem;
       }
     }
   }

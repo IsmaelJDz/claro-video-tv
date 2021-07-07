@@ -5,7 +5,7 @@ import styles from "../header/header.module.scss";
 
 /**
  *
- * @param {*} param0 elementMenu reference to domElement
+ * @param {*} param elementMenu reference to domElement
  * @returns navigation Movile and desktop
  */
 

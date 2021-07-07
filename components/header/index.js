@@ -1,17 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, memo } from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import Image from "next/image";
 
-import Navigation from "../navigation/";
-import Button from "../UI/button";
-import InputSearch from "../UI/inputSearch";
+import Navigation from "@/components/navigation";
+import Button from "@/components/UI/button";
+import InputSearch from "@/components/UI/inputSearch";
 
-import { setFilterMovie, setSpecificMovie } from "../../redux/movies/movie.action";
+import { setFilterMovie } from "@/redux/movies/movie.action";
 
 import styles from "./header.module.scss";
 
 const Header = () => {
+
   const dispatch = useDispatch();
   const router = useRouter();
   const [show, setShow] = useState(false);
@@ -85,4 +86,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

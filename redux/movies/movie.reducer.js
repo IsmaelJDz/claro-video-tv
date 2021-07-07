@@ -14,7 +14,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
       };
 
     case MoviesActionTypes.SET_FILTER_MOVIE:
-
       return {
         ...state,
         filterMovie:

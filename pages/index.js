@@ -1,7 +1,7 @@
-import MainContainer from "../components/main";
 import { useDispatch } from "react-redux";
+import MainContainer from "@/components/main";
 
-import { setCurrentMovies } from "../redux/movies/movie.action";
+import { setCurrentMovies } from "@/redux/movies/movie.action";
 
 /**
  *

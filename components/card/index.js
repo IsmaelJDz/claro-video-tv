@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import { useRouter } from "next/router";
-import ReactContentLoader from "../skeleton";
-import { useObserver } from "../../hooks/useObserver";
+import ReactContentLoader from "@/components/skeleton";
+import { useObserver } from "@/hooks/useObserver";
 
 import styles from "./card.module.scss";
 
@@ -12,7 +12,16 @@ import styles from "./card.module.scss";
  */
 
 const Card = props => {
-  const { image_base_horizontal, title, description, id, title_uri } = props;
+  const {
+    id,
+    image_base_horizontal,
+    title,
+    description,
+    title_uri,
+    unique,
+    year,
+    duration
+  } = props;
 
   const router = useRouter();
   const [show, element] = useObserver();
@@ -83,6 +92,22 @@ const Card = props => {
           >
             {description}
           </figcaption>
+          {unique && (
+            <div className={styles.dataCard}>
+              <p className={styles.titleCard}>
+                {title}
+              </p>
+              <p>
+                Año: { year }
+              </p>
+              <p>
+                duración { duration } Hrs.
+              </p>
+              <p>
+                Ver mas...
+              </p>
+            </div>
+          )}
         </>
       ) : (
         <ReactContentLoader
@@ -99,4 +124,6 @@ const Card = props => {
   );
 };
 
-export default Card;
+export default memo(Card, (prevState, nextState) => {
+  return prevState.unique === nextState.unique;
+});

@@ -4,7 +4,7 @@ const InputSearch = ({ handleChange }) => {
   return (
     <div className={styles.mainInput}>
       <input
-        type="search"
+        type="text"
         name="search"
         className={styles.search}
         pattern=".*\S.*"

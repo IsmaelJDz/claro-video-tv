@@ -39,8 +39,14 @@
     display: flex;
     justify-content: flex-end;
     grid-area: rightMenu;
-    margin-right: 15px;
+    padding-right: 15px;
+    gap: 10px;
   }
+
+  .mobileMenu {
+    display: none;
+  }
+
 }
 
 .header {
@@ -118,4 +124,11 @@
       }
     }
   }
+
+  .rightMenu {
+    display: flex;
+    justify-content: center;
+    grid-area: rightMenu;
+  }
+
 }

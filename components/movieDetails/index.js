@@ -1,4 +1,4 @@
-import Button from "../UI/button";
+import Button from "@/components/UI/button";
 
 import styles from "./moviedetails.module.scss";
 
