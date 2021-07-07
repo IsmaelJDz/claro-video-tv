@@ -6,7 +6,7 @@ Array [
     data-testid="image"
   >
     <svg
-      aria-labelledby="j19hoyr-aria"
+      aria-labelledby="fc7i533-aria"
       height="340"
       peed="2"
       role="img"
@@ -15,22 +15,22 @@ Array [
       width="425"
     >
       <title
-        id="j19hoyr-aria"
+        id="fc7i533-aria"
       >
         Loading...
       </title>
       <rect
-        clip-path="url(#j19hoyr-diff)"
+        clip-path="url(#fc7i533-diff)"
         height="100%"
         role="presentation"
-        style="fill: url(#j19hoyr-animated-diff);"
+        style="fill: url(#fc7i533-animated-diff);"
         width="100%"
         x="0"
         y="0"
       />
       <defs>
         <clippath
-          id="j19hoyr-diff"
+          id="fc7i533-diff"
         >
           <rect
             height="340"
@@ -42,7 +42,7 @@ Array [
           />
         </clippath>
         <lineargradient
-          id="j19hoyr-animated-diff"
+          id="fc7i533-animated-diff"
         >
           <stop
             offset="0%"

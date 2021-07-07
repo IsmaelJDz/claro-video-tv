@@ -1,8 +1,8 @@
 # Frontend Claro video 📺
 
-![Captura de la app](public/img/Home.png)
+![screenshot](public/img/Home.png)
 
-[See the aplication](https://meru-ecommerce.vercel.app/) 👀
+[See app](https://claro-app-tv.vercel.app/) 👀
 
 ## Welcome! 👋
 
@@ -10,11 +10,11 @@
 
 - HTML5
 - CSS3
+- Sass
 - JavaScript,
 - React,
 - Next,
 - Redux
-- Tailwind
 
 ## Pre-requirements 📋
 
